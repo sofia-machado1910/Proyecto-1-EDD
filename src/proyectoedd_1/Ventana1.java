@@ -31,10 +31,10 @@ public class Ventana1 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        cargarRed = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        valor = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -48,14 +48,14 @@ public class Ventana1 extends javax.swing.JFrame {
         jLabel1.setText("- Cobertura de sucursales -");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 20));
 
-        jButton1.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jButton1.setText("Cargar red");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cargarRed.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        cargarRed.setText("Cargar red");
+        cargarRed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cargarRedActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 120, 30));
+        jPanel1.add(cargarRed, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 120, 30));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         jLabel2.setText("Selección de Red de Transporte");
@@ -65,13 +65,13 @@ public class Ventana1 extends javax.swing.JFrame {
         jLabel3.setText("Por favor, indique el valor de t : ");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        valor.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        valor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                valorActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 160, -1));
+        jPanel1.add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 160, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("El siguiente botón le permitirá cargar un archivo JSON");
@@ -95,18 +95,18 @@ public class Ventana1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cargarRedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarRedActionPerformed
         Grafo transportGraph = new Grafo();
         transportGraph.loadTransportNetwork();
         
         Ventana2 a = new Ventana2();
         a.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_cargarRedActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void valorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_valorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,13 +145,13 @@ public class Ventana1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton cargarRed;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField valor;
     // End of variables declaration//GEN-END:variables
 }

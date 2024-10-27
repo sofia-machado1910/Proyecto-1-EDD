@@ -33,17 +33,17 @@ public class Ventana2 extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        regresar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        nuevoT = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        actualizarGrafo = new javax.swing.JButton();
+        ColocarSucursal = new javax.swing.JButton();
+        quitarSucursal = new javax.swing.JButton();
         jComboBox3 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jComboBox4 = new javax.swing.JComboBox<>();
@@ -58,14 +58,14 @@ public class Ventana2 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jButton1.setText("< Regresar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        regresar.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        regresar.setText("< Regresar");
+        regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                regresarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         jLabel1.setText("Posicionamiento de sucursales");
@@ -74,7 +74,7 @@ public class Ventana2 extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Cambiar t :");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 70, 30));
+        jPanel1.add(nuevoT, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 70, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("Colocar sucursal en la parada : ");
@@ -100,27 +100,27 @@ public class Ventana2 extends javax.swing.JFrame {
         });
         jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 140, -1));
 
-        jButton2.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jButton2.setText("Actualizar Grafo");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        actualizarGrafo.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        actualizarGrafo.setText("Actualizar Grafo");
+        actualizarGrafo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                actualizarGrafoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, -1));
+        jPanel1.add(actualizarGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, -1));
 
-        jButton3.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jButton3.setText("Colocar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ColocarSucursal.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        ColocarSucursal.setText("Colocar");
+        ColocarSucursal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ColocarSucursalActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 80, -1));
+        jPanel1.add(ColocarSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 80, -1));
 
-        jButton4.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
-        jButton4.setText("Quitar");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 80, -1));
+        quitarSucursal.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        quitarSucursal.setText("Quitar");
+        jPanel1.add(quitarSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 80, -1));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
@@ -174,19 +174,19 @@ public class Ventana2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
         Ventana1 b = new Ventana1();
         b.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_regresarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ColocarSucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ColocarSucursalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ColocarSucursalActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void actualizarGrafoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarGrafoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_actualizarGrafoActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         
@@ -243,12 +243,10 @@ public class Ventana2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ColocarSucursal;
+    private javax.swing.JButton actualizarGrafo;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -264,6 +262,8 @@ public class Ventana2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField nuevoT;
+    private javax.swing.JButton quitarSucursal;
+    private javax.swing.JButton regresar;
     // End of variables declaration//GEN-END:variables
 }
